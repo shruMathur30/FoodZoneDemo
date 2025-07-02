@@ -1,28 +1,33 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useEffect } from 'react';
+import { Provider, useDispatch } from 'react-redux';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './src/firebase/firebaseConfig';
+import { login, logout } from './src/redux/slices/userSlice';
+import AppNavigator from './src/navigation/AppNavigator';
+import store from './src/redux/store';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+const AuthProvider = () => {
+  const dispatch = useDispatch();
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user?.email) {
+        dispatch(login({ email: user.email }));
+      } else {
+        dispatch(logout());
+      }
+    });
 
-  return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
-  );
-}
+    return unsubscribe;
+  }, [dispatch]);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+  return <AppNavigator />;
+};
+
+const App = () => (
+  <Provider store={store}>
+    <AuthProvider />
+  </Provider>
+);
 
 export default App;

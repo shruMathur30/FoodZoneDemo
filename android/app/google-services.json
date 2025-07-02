@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569667756658",
+    "project_id": "foodzone-925f5",
+    "storage_bucket": "foodzone-925f5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569667756658:android:6f6024cd22a308225f58eb",
+        "android_client_info": {
+          "package_name": "com.foodzone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzIqvs91hhzk-DzUzzq2stMzK7KC8uvUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
