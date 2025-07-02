@@ -51,6 +51,21 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: '600',
   },
+  passwordWrapper: {
+    position: 'relative',
+    width: '100%',
+  },
+
+  eyeIcon: {
+    position: 'absolute',
+    right: 10,
+    top: 16,
+  },
+
+  eyeText: {
+    width: 20, height: 20, tintColor: 'black'
+  },
+
 });
 
 export default styles;
