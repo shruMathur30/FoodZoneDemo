@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  View, Text, FlatList, TouchableOpacity, StyleSheet, SafeAreaView,
+  View, Text, FlatList, TouchableOpacity, SafeAreaView,
   Image,
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { FoodItem, RootStackParamList } from '../../types/types';
-import { addToCart, clearCart, removeFromCart, setQuantity } from '../../redux/slices/cartSlice';
+import { RootStackParamList } from '../../types/types';
+import { clearCart, setQuantity } from '../../redux/slices/cartSlice';
 import styles from './CheckoutStyles';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
