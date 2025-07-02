@@ -7,18 +7,12 @@ import {
   Alert,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootState } from '../redux/store';
-import { RootStackParamList } from '../types/types';
 import { addToCart, clearCart, setQuantity } from '../redux/slices/cartSlice';
 import { Colors } from '../styles/colors';
 
-type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
-
 const RestaurantCard = ({ restaurant }: { restaurant: any }) => {
   const dispatch = useDispatch();
-  const navigation = useNavigation<NavigationProp>();
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const cartRestaurantName = useSelector((state: RootState) => state.cart.restaurantName);
 
@@ -43,7 +37,7 @@ const RestaurantCard = ({ restaurant }: { restaurant: any }) => {
       price: item.price,
       rating: Number(item.rating),
       restaurant_Name: restaurant.name,
-      cuisine: '', // You can pass cuisine name if needed
+      cuisine: '',
     };
 
     const update = () => {
@@ -134,9 +128,15 @@ const RestaurantCard = ({ restaurant }: { restaurant: any }) => {
                     </TouchableOpacity>
                   )
                 ) : (
-                  <View style={styles.disabledBtn}>
-                    <Text style={styles.disabledBtnText}>Add to Cart</Text>
-                  </View>
+                  // <View style={styles.disabledBtn}>
+                  //   <Text style={styles.disabledBtnText}>Add to Cart</Text>
+                  // </View>
+                  <TouchableOpacity
+                      style={styles.addBtn}
+                      onPress={() => handleQuantityChange(item, 1)}
+                    >
+                      <Text style={styles.addBtnText}>Add to Cart</Text>
+                    </TouchableOpacity>
                 )}
               </View>
             );

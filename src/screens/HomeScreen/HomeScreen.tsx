@@ -1,17 +1,18 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   View,
   Text,
   FlatList,
   SafeAreaView,
-  StyleSheet,
   TouchableOpacity,
+  Alert,
+  BackHandler,
 } from 'react-native';
 import localData from '../../data/DummyData.json';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import RestaurantCard from '../../components/RestaurantCard';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { Restaurant } from '../../types/types';
 import styles from './HomeStyles';
 
@@ -29,6 +30,30 @@ const HomeScreen = () => {
   useEffect(() => {
     setData(localData as Restaurant[]);
   }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      const onBackPress = () => {
+        Alert.alert(
+          'Exit App',
+          'Do you want to exit?',
+          [
+            { text: 'Cancel', style: 'cancel' },
+            { text: 'Exit', onPress: () => BackHandler.exitApp() },
+          ],
+          { cancelable: true }
+        );
+        return true;
+      };
+
+      const subscription = BackHandler.addEventListener(
+        'hardwareBackPress',
+        onBackPress
+      );
+
+      return () => subscription.remove();
+    }, [])
+  );
 
   return (
     <SafeAreaView style={styles.container}>

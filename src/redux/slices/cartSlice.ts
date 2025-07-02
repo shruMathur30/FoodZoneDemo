@@ -32,7 +32,7 @@ export const cartSlice = createSlice({
     ) => {
       const existingItem = state.items.find(i => i.id === action.payload.item.id);
       if (existingItem) {
-        existingItem.quantity += action.payload.item.quantity || 1; // <- respect passed quantity
+        existingItem.quantity += action.payload.item.quantity || 1;
       } else {
         state.items.push({ ...action.payload.item });
       }
@@ -68,8 +68,6 @@ export const cartSlice = createSlice({
           state.items = state.items.filter(i => i.id !== action.payload.id);
         }
       } else if (action.payload.quantity > 0) {
-        // You MUST also pass full item info (see below)
-        // This fallback requires separate handling
         console.warn("Trying to setQuantity on item not in cart:", action.payload.id);
       }
 

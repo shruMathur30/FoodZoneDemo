@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-// redux/slices/userSlice.ts
 interface UserState {
   isLoggedIn: boolean;
   email?: string;
