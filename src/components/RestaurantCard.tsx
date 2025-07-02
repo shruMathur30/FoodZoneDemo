@@ -1,104 +1,252 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity, Alert } from 'react-native';
-import { Restaurant, FoodItem, RootStackParamList } from '../types/types';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+} from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, clearCart } from '../redux/slices/cartSlice';
 import { useNavigation } from '@react-navigation/native';
-import { RootState } from '../redux/store';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootState } from '../redux/store';
+import { RootStackParamList } from '../types/types';
+import { addToCart, clearCart, setQuantity } from '../redux/slices/cartSlice';
+import { Colors } from '../styles/colors';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
-const RestaurantCard = ({
-  restaurant,
-}: {
-  restaurant: Restaurant;
-}) => {
+const RestaurantCard = ({ restaurant }: { restaurant: any }) => {
   const dispatch = useDispatch();
   const navigation = useNavigation<NavigationProp>();
-  const cuisines = restaurant.Cuisines.split(',').map(c => c.trim());
+  const cartItems = useSelector((state: RootState) => state.cart.items);
   const cartRestaurantName = useSelector((state: RootState) => state.cart.restaurantName);
 
+  const isActiveRestaurant =
+    !cartRestaurantName || cartRestaurantName === restaurant.name;
 
-  const handleAddToCart = (item: any) => {
-    if (cartRestaurantName && cartRestaurantName !== restaurant.restaurant_Name) {
+  const getQuantity = (itemName: string) => {
+    const itemId = `${restaurant.id}-${itemName}`;
+    const cartItem = cartItems.find(ci => ci.id === itemId);
+    return cartItem?.quantity || 0;
+  };
+
+  const handleQuantityChange = (item: any, delta: number) => {
+    const itemId = `${restaurant.id}-${item.name}`;
+    const currentQty = getQuantity(item.name);
+    const newQty = currentQty + delta;
+
+    const itemPayload = {
+      ...item,
+      id: itemId,
+      name: item.name,
+      price: item.price,
+      rating: Number(item.rating),
+      restaurant_Name: restaurant.name,
+      cuisine: '', // You can pass cuisine name if needed
+    };
+
+    const update = () => {
+      if (newQty <= 0) {
+        dispatch(setQuantity({ id: itemId, quantity: 0 }));
+      } else if (currentQty === 0) {
+        dispatch(addToCart({
+          item: { ...itemPayload, quantity: 1 },
+          restaurantName: restaurant.name,
+          restaurantId: restaurant.id,
+        }));
+      } else {
+        dispatch(setQuantity({ id: itemId, quantity: newQty }));
+      }
+
+    };
+
+    if (!isActiveRestaurant) {
       Alert.alert(
-        "Replace Cart Items?",
-        "Your cart has items from another restaurant. Do you want to replace them?",
+        'Replace Cart Items?',
+        'Your cart has items from another restaurant. Do you want to replace them?',
         [
+          { text: 'Cancel', style: 'cancel' },
           {
-            text: "Cancel",
-            style: "cancel",
-          },
-          {
-            text: "OK",
+            text: 'OK',
             onPress: () => {
               dispatch(clearCart());
-              dispatch(addToCart({ item, restaurantName: restaurant.restaurant_Name }));
-              navigation.navigate("Checkout");
+              dispatch(addToCart({
+                item: { ...itemPayload, quantity: 1 },
+                restaurantName: restaurant.name,
+                restaurantId: restaurant.id
+              }));
             },
           },
-        ],
-        { cancelable: true }
+        ]
       );
     } else {
-      dispatch(addToCart({ item, restaurantName: restaurant.restaurant_Name }));
-      navigation.navigate("Checkout");
+      update();
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-        {restaurant.restaurant_Name} ({restaurant.rating})
-      </Text>
+      <Text style={styles.title}>{restaurant.name}</Text>
 
-      {cuisines.map((cuisine, idx) => {
-        const items = restaurant.foodItems.filter(item => item.cuisine === cuisine);
+      {restaurant.cuisines.map((cuisine: any, idx: number) => (
+        <View key={idx} style={styles.cuisineSection}>
+          <Text style={styles.cuisineTitle}>
+            🍽️ {cuisine.name}{' '}
+            <Text style={styles.cuisineTag}>({cuisine.tag})</Text>
+          </Text>
 
-        if (items.length === 0) return null;
+          {cuisine.items.map((item: any) => {
+            const quantity = getQuantity(item.name);
 
-        return (
-          <View key={idx} style={styles.cuisineSection}>
-            <Text style={styles.cuisineTitle}>{cuisine}</Text>
-            {items.map(item => (
-              <View key={item.id} style={styles.foodItem}>
-                <Text>{item.name} - ⭐ {item.rating} - ₹{item.price}</Text>
-                <Button title="Add to Cart" onPress={() => handleAddToCart(item)} />
+            return (
+              <View key={item.name} style={styles.foodItem}>
+                <View style={styles.itemTextContainer}>
+                  <Text style={styles.itemName}>{item.name}</Text>
+                  <Text style={styles.itemDetails}>
+                    ⭐ {item.rating} | ₹{item.price}
+                  </Text>
+                </View>
+
+                {isActiveRestaurant ? (
+                  quantity > 0 ? (
+                    <View style={styles.qtyControls}>
+                      <TouchableOpacity
+                        onPress={() => handleQuantityChange(item, -1)}
+                        style={styles.qtyBtn}
+                      >
+                        <Text style={styles.qtyText}>−</Text>
+                      </TouchableOpacity>
+                      <Text style={styles.qtyNumber}>{quantity}</Text>
+                      <TouchableOpacity
+                        onPress={() => handleQuantityChange(item, 1)}
+                        style={styles.qtyBtn}
+                      >
+                        <Text style={styles.qtyText}>+</Text>
+                      </TouchableOpacity>
+                    </View>
+                  ) : (
+                    <TouchableOpacity
+                      style={styles.addBtn}
+                      onPress={() => handleQuantityChange(item, 1)}
+                    >
+                      <Text style={styles.addBtnText}>Add to Cart</Text>
+                    </TouchableOpacity>
+                  )
+                ) : (
+                  <View style={styles.disabledBtn}>
+                    <Text style={styles.disabledBtnText}>Add to Cart</Text>
+                  </View>
+                )}
               </View>
-            ))}
-          </View>
-        );
-      })}
+            );
+          })}
+        </View>
+      ))}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    marginBottom: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    elevation: 2,
+    backgroundColor: Colors.background,
+    margin: 12,
+    borderRadius: 16,
+    padding: 18,
+    borderColor: Colors.border,
+    borderWidth: 1,
+    shadowColor: Colors.primary,
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 4,
   },
   title: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
+    color: Colors.primary,
+    marginBottom: 12,
   },
   cuisineSection: {
     marginTop: 10,
   },
   cuisineTitle: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: '600',
-    marginBottom: 5,
+    color: Colors.text,
+    marginBottom: 8,
+  },
+  cuisineTag: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: Colors.gray,
   },
   foodItem: {
-    marginBottom: 8,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingVertical: 10,
+    borderBottomColor: Colors.border,
+    borderBottomWidth: 1,
+  },
+  itemTextContainer: {
+    flex: 1,
+    paddingRight: 10,
+  },
+  itemName: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.text,
+  },
+  itemDetails: {
+    fontSize: 13,
+    color: Colors.gray,
+    marginTop: 2,
+  },
+  qtyControls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#eaf3fa',
+    borderRadius: 8,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
+  },
+  qtyBtn: {
+    backgroundColor: Colors.primary,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  qtyText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '700',
+  },
+  qtyNumber: {
+    marginHorizontal: 8,
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colors.text,
+  },
+  addBtn: {
+    backgroundColor: Colors.primary,
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 10,
+  },
+  addBtnText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  disabledBtn: {
+    backgroundColor: '#dcdcdc',
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 10,
+  },
+  disabledBtnText: {
+    color: '#999',
+    fontWeight: '600',
   },
 });
 

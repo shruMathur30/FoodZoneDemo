@@ -1,454 +1,961 @@
 [
   {
-    "id": 6317637,
-    "restaurant_Name": "Le Petit Souffle",
-    "country_Code": 162,
-    "city": "Makati city",
-    "address": "Third Floor, Century city Mall, Kalayaan Avenue, Poblacion, Makati city",
-    "locality": "Century city Mall, Poblacion, Makati city",
-    "locality_verbose": "Century city Mall, Poblacion, Makati city, Makati city",
-    "Longitude": 121.027535,
-    "Latitude": 14.565443,
-    "Cuisines": "French, Japanese, Desserts",
-    "Average Cost for two": 1100,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 3,
-    "rating": 4.8,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 314,
-    "foodItems": [
+    "id": "123",
+    "name": "Spice Junction",
+    "cuisines": [
       {
-        "id": "1",
-        "name": "French Onion Soup",
-        "rating": 4.5,
-        "price": 300,
-        "cuisine": "French"
+        "name": "Desserts",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Brownie",
+            "rating": "3.8",
+            "price": 68
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "rating": "4.7",
+            "price": 245
+          },
+          {
+            "name": "Gulab Jamun",
+            "rating": "4.8",
+            "price": 183
+          }
+        ]
       },
       {
-        "id": "2",
-        "name": "Sushi Rolls",
-        "rating": 4.7,
-        "price": 450,
-        "cuisine": "Japanese"
-      },
-      {
-        "id": "3",
-        "name": "Chocolate Souffle",
-        "rating": 4.9,
-        "price": 250,
-        "cuisine": "Desserts"
+        "name": "Chinese",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Veg Noodles",
+            "rating": "4.2",
+            "price": 296
+          },
+          {
+            "name": "Manchurian",
+            "rating": "4.0",
+            "price": 195
+          },
+          {
+            "name": "Spring Rolls",
+            "rating": "4.5",
+            "price": 242
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6304287,
-    "restaurant_Name": "Izakaya Kikufuji",
-    "country_Code": 162,
-    "city": "Makati city",
-    "address": "Little Tokyo, 2277 Chino Roces Avenue, Legaspi Village, Makati city",
-    "locality": "Little Tokyo, Legaspi Village, Makati city",
-    "locality_verbose": "Little Tokyo, Legaspi Village, Makati city, Makati city",
-    "Longitude": 121.014101,
-    "Latitude": 14.553708,
-    "Cuisines": "French, Japanese, Desserts",
-    "Average Cost for two": 1200,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 3,
-    "rating": 4.5,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 591,
-    "foodItems": [
+    "id": "124",
+    "name": "Bombay Bistro",
+    "cuisines": [
       {
-        "id": "4",
-        "name": "Ratatouille",
-        "rating": 4.2,
-        "price": 320,
-        "cuisine": "French"
+        "name": "Desserts",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Brownie",
+            "rating": "4.2",
+            "price": 200
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "rating": "4.2",
+            "price": 96
+          },
+          {
+            "name": "Gulab Jamun",
+            "rating": "4.5",
+            "price": 268
+          }
+        ]
       },
       {
-        "id": "5",
-        "name": "Tempura",
-        "rating": 4.6,
-        "price": 400,
-        "cuisine": "Japanese"
-      },
-      {
-        "id": "6",
-        "name": "Mango Pudding",
-        "rating": 4.8,
-        "price": 270,
-        "cuisine": "Desserts"
+        "name": "South Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Dosa",
+            "rating": "4.1",
+            "price": 178
+          },
+          {
+            "name": "Idli Sambhar",
+            "rating": "4.8",
+            "price": 100
+          },
+          {
+            "name": "Vada",
+            "rating": "4.7",
+            "price": 208
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6300002,
-    "restaurant_Name": "Heat - Edsa Shangri-La",
-    "country_Code": 162,
-    "city": "Mandaluyong city",
-    "address": "Edsa Shangri-La, 1 Garden Way, Ortigas, Mandaluyong city",
-    "locality": "Edsa Shangri-La, Ortigas, Mandaluyong city",
-    "locality_verbose": "Edsa Shangri-La, Ortigas, Mandaluyong city, Mandaluyong city",
-    "Longitude": 121.056831,
-    "Latitude": 14.581404,
-    "Cuisines": "Mexican, Desserts",
-    "Average Cost for two": 4000,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4.4,
-    "Rating color": "Green",
-    "Rating text": "Very Good",
-    "Votes": 270,
-    "foodItems": [
+    "id": "125",
+    "name": "Urban Grill",
+    "cuisines": [
       {
-        "id": "7",
-        "name": "Tacos al Pastor",
-        "rating": 4.3,
-        "price": 280,
-        "cuisine": "Mexican"
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "4.4",
+            "price": 266
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.7",
+            "price": 90
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.4",
+            "price": 110
+          }
+        ]
       },
       {
-        "id": "8",
-        "name": "Churros",
-        "rating": 4.6,
-        "price": 220,
-        "cuisine": "Desserts"
-      },
-      {
-        "id": "9",
-        "name": "Guacamole & Chips",
-        "rating": 4.4,
-        "price": 200,
-        "cuisine": "Mexican"
+        "name": "Biryani",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Chicken Biryani",
+            "rating": "4.9",
+            "price": 61
+          },
+          {
+            "name": "Veg Biryani",
+            "rating": "4.5",
+            "price": 108
+          },
+          {
+            "name": "Hyderabadi Biryani",
+            "rating": "4.6",
+            "price": 270
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6318506,
-    "restaurant_Name": "Ooma",
-    "country_Code": 162,
-    "city": "Mandaluyong city",
-    "address": "Third Floor, Mega Fashion Hall, SM Megamall, Ortigas, Mandaluyong city",
-    "locality": "SM Megamall, Ortigas, Mandaluyong city",
-    "locality_verbose": "SM Megamall, Ortigas, Mandaluyong city, Mandaluyong city",
-    "Longitude": 121.056475,
-    "Latitude": 14.585318,
-    "Cuisines": "Indian, Desserts",
-    "Average Cost for two": 1500,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "No",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4.9,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 365,
-    "foodItems": [
+    "id": "126",
+    "name": "Tandoori Treats",
+    "cuisines": [
       {
-        "id": "10",
-        "name": "Butter Chicken",
-        "rating": 4.8,
-        "price": 350,
-        "cuisine": "Indian"
+        "name": "Biryani",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Chicken Biryani",
+            "rating": "4.7",
+            "price": 69
+          },
+          {
+            "name": "Veg Biryani",
+            "rating": "4.3",
+            "price": 59
+          },
+          {
+            "name": "Hyderabadi Biryani",
+            "rating": "4.6",
+            "price": 176
+          }
+        ]
       },
       {
-        "id": "11",
-        "name": "Paneer Tikka",
-        "rating": 4.7,
-        "price": 300,
-        "cuisine": "Indian"
-      },
-      {
-        "id": "12",
-        "name": "Gulab Jamun",
-        "rating": 4.9,
-        "price": 180,
-        "cuisine": "Desserts"
+        "name": "Fast Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Burger",
+            "rating": "4.0",
+            "price": 233
+          },
+          {
+            "name": "Pizza",
+            "rating": "4.7",
+            "price": 185
+          },
+          {
+            "name": "French Fries",
+            "rating": "4.7",
+            "price": 278
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6314302,
-    "restaurant_Name": "Sambo Kojin",
-    "country_Code": 162,
-    "city": "Mandaluyong city",
-    "address": "Third Floor, Mega Atrium, SM Megamall, Ortigas, Mandaluyong city",
-    "locality": "SM Megamall, Ortigas, Mandaluyong city",
-    "locality_verbose": "SM Megamall, Ortigas, Mandaluyong city, Mandaluyong city",
-    "Longitude": 121.057508,
-    "Latitude": 14.58445,
-    "Cuisines": "Korean, Desserts",
-    "Average Cost for two": 1500,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4.8,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 229,
-    "foodItems": [
+    "id": "127",
+    "name": "Southern Spice",
+    "cuisines": [
       {
-        "id": "13",
-        "name": "Bulgogi",
-        "rating": 4.6,
-        "price": 370,
-        "cuisine": "Korean"
+        "name": "Street Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Vada Pav",
+            "rating": "4.4",
+            "price": 160
+          },
+          {
+            "name": "Pav Bhaji",
+            "rating": "4.4",
+            "price": 171
+          },
+          {
+            "name": "Dabeli",
+            "rating": "4.2",
+            "price": 242
+          }
+        ]
       },
       {
-        "id": "14",
-        "name": "Kimchi Stew",
-        "rating": 4.5,
-        "price": 320,
-        "cuisine": "Korean"
-      },
-      {
-        "id": "15",
-        "name": "Mochi Ice Cream",
-        "rating": 4.8,
-        "price": 260,
-        "cuisine": "Desserts"
+        "name": "Desserts",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Brownie",
+            "rating": "4.3",
+            "price": 82
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "rating": "4.5",
+            "price": 67
+          },
+          {
+            "name": "Gulab Jamun",
+            "rating": "4.6",
+            "price": 227
+          }
+        ]
       }
     ]
   },
   {
-    "id": 18189371,
-    "restaurant_Name": "Din Tai Fung",
-    "country_Code": 162,
-    "city": "Mandaluyong city",
-    "address": "Ground Floor, Mega Fashion Hall, SM Megamall, Ortigas, Mandaluyong city",
-    "locality": "SM Megamall, Ortigas, Mandaluyong city",
-    "locality_verbose": "SM Megamall, Ortigas, Mandaluyong city, Mandaluyong city",
-    "Longitude": 121.056314,
-    "Latitude": 14.583764,
-    "Cuisines": "Filipino, Desserts",
-    "Average Cost for two": 1000,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "No",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 3,
-    "rating": 4.4,
-    "Rating color": "Green",
-    "Rating text": "Very Good",
-    "Votes": 336,
-    "foodItems": [
+    "id": "128",
+    "name": "The Punjabi Dhaba",
+    "cuisines": [
       {
-        "id": "16",
-        "name": "Adobo",
-        "rating": 4.7,
-        "price": 300,
-        "cuisine": "Filipino"
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.4",
+            "price": 137
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "3.9",
+            "price": 286
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.1",
+            "price": 181
+          }
+        ]
       },
       {
-        "id": "17",
-        "name": "Sinigang",
-        "rating": 4.6,
-        "price": 310,
-        "cuisine": "Filipino"
-      },
-      {
-        "id": "18",
-        "name": "Leche Flan",
-        "rating": 4.9,
-        "price": 220,
-        "cuisine": "Desserts"
+        "name": "Drinks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Chai",
+            "rating": "4.3",
+            "price": 145
+          },
+          {
+            "name": "Cold Coffee",
+            "rating": "4.3",
+            "price": 77
+          },
+          {
+            "name": "Lassi",
+            "rating": "4.6",
+            "price": 271
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6300781,
-    "restaurant_Name": "Buffet 101",
-    "country_Code": 162,
-    "city": "Pasay city",
-    "address": "Building K, SM By The Bay, Sunset Boulevard, Mall of Asia Complex (MOA), Pasay city",
-    "locality": "SM by the Bay, Mall of Asia Complex, Pasay city",
-    "locality_verbose": "SM by the Bay, Mall of Asia Complex, Pasay city, Pasay city",
-    "Longitude": 120.9796667,
-    "Latitude": 14.53133333,
-    "Cuisines": "Seafood, Desserts",
-    "Average Cost for two": 2000,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4,
-    "Rating color": "Green",
-    "Rating text": "Very Good",
-    "Votes": 520,
-    "foodItems": [
+    "id": "129",
+    "name": "Mumbai Masala",
+    "cuisines": [
       {
-        "id": "19",
-        "name": "Garlic Butter Shrimp",
-        "rating": 4.6,
-        "price": 380,
-        "cuisine": "Seafood"
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "4.5",
+            "price": 193
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.9",
+            "price": 225
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.3",
+            "price": 65
+          }
+        ]
       },
       {
-        "id": "20",
-        "name": "Grilled Salmon",
-        "rating": 4.7,
-        "price": 420,
-        "cuisine": "Seafood"
-      },
-      {
-        "id": "21",
-        "name": "Key Lime Pie",
-        "rating": 4.5,
-        "price": 260,
-        "cuisine": "Desserts"
+        "name": "Street Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Vada Pav",
+            "rating": "5.0",
+            "price": 98
+          },
+          {
+            "name": "Pav Bhaji",
+            "rating": "4.1",
+            "price": 256
+          },
+          {
+            "name": "Dabeli",
+            "rating": "4.5",
+            "price": 82
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6301290,
-    "restaurant_Name": "Vikings",
-    "country_Code": 162,
-    "city": "Pasay city",
-    "address": "Building B, By The Bay, Seaside Boulevard, Mall of Asia Complex (MOA), Pasay city",
-    "locality": "SM by the Bay, Mall of Asia Complex, Pasay city",
-    "locality_verbose": "SM by the Bay, Mall of Asia Complex, Pasay city, Pasay city",
-    "Longitude": 120.9793333,
-    "Latitude": 14.54,
-    "Cuisines": "Vietnamese, Filipino",
-    "Average Cost for two": 2000,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4.2,
-    "Rating color": "Green",
-    "Rating text": "Very Good",
-    "Votes": 677,
-    "foodItems": [
+    "id": "130",
+    "name": "Royal Feast",
+    "cuisines": [
       {
-        "id": "22",
-        "name": "Pho",
-        "rating": 4.4,
-        "price": 340,
-        "cuisine": "Vietnamese"
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.1",
+            "price": 300
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.5",
+            "price": 227
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "5.0",
+            "price": 226
+          }
+        ]
       },
       {
-        "id": "23",
-        "name": "Spring Rolls",
-        "rating": 4.5,
-        "price": 230,
-        "cuisine": "Vietnamese"
-      },
-      {
-        "id": "24",
-        "name": "Coconut Tapioca",
-        "rating": 4.6,
-        "price": 250,
-        "cuisine": "Filipino"
+        "name": "Fast Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Burger",
+            "rating": "4.2",
+            "price": 162
+          },
+          {
+            "name": "Pizza",
+            "rating": "4.4",
+            "price": 137
+          },
+          {
+            "name": "French Fries",
+            "rating": "4.9",
+            "price": 68
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6300010,
-    "restaurant_Name": "Spiral - Sofitel Philippine Plaza Manila",
-    "country_Code": 162,
-    "city": "Pasay city",
-    "address": "Plaza Level, Sofitel Philippine Plaza Manila, CCP Complex, Pasay city",
-    "locality": "Sofitel Philippine Plaza Manila, Pasay city",
-    "locality_verbose": "Sofitel Philippine Plaza Manila, Pasay city, Pasay city",
-    "Longitude": 120.98009,
-    "Latitude": 14.55299,
-    "Cuisines": "Middle Eastern, Desserts",
-    "Average Cost for two": 6000,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 4,
-    "rating": 4.9,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 621,
-    "foodItems": [
+    "id": "131",
+    "name": "Desi Tandoor",
+    "cuisines": [
       {
-        "id": "25",
-        "name": "Shakshuka",
-        "rating": 4.5,
-        "price": 310,
-        "cuisine": "Middle Eastern"
+        "name": "Barbecue",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Grilled Chicken",
+            "rating": "3.9",
+            "price": 108
+          },
+          {
+            "name": "BBQ Paneer",
+            "rating": "3.8",
+            "price": 70
+          },
+          {
+            "name": "Smoked Wings",
+            "rating": "4.4",
+            "price": 286
+          }
+        ]
       },
       {
-        "id": "26",
-        "name": "Falafel",
-        "rating": 4.4,
-        "price": 280,
-        "cuisine": "Middle Eastern"
-      },
-      {
-        "id": "27",
-        "name": "Baklava",
-        "rating": 4.8,
-        "price": 270,
-        "cuisine": "Desserts"
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "3.9",
+            "price": 168
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.7",
+            "price": 85
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.3",
+            "price": 157
+          }
+        ]
       }
     ]
   },
   {
-    "id": 6314987,
-    "restaurant_Name": "Locavore",
-    "country_Code": 162,
-    "city": "Pasig city",
-    "address": "Brixton Technology Center, 10 Brixton Street, Kapitolyo, Pasig city",
-    "locality": "Kapitolyo",
-    "locality_verbose": "Kapitolyo, Pasig city",
-    "Longitude": 121.056532,
-    "Latitude": 14.572041,
-    "Cuisines": "Italian",
-    "Average Cost for two": 1100,
-    "Currency": "Botswana Pula(P)",
-    "Has Table booking": "Yes",
-    "Has Online delivery": "No",
-    "Is delivering now": "No",
-    "Switch to order menu": "No",
-    "price": 3,
-    "rating": 4.8,
-    "Rating color": "Dark Green",
-    "Rating text": "Excellent",
-    "Votes": 532,
-    "foodItems": [
+    "id": "132",
+    "name": "Curry Kingdom",
+    "cuisines": [
       {
-        "id": "28",
-        "name": "Spaghetti Carbonara",
-        "rating": 4.6,
-        "price": 330,
-        "cuisine": "Italian"
+        "name": "South Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Dosa",
+            "rating": "4.3",
+            "price": 228
+          },
+          {
+            "name": "Idli Sambhar",
+            "rating": "4.0",
+            "price": 167
+          },
+          {
+            "name": "Vada",
+            "rating": "4.1",
+            "price": 239
+          }
+        ]
       },
       {
-        "id": "29",
-        "name": "Lasagna",
-        "rating": 4.7,
-        "price": 370,
-        "cuisine": "Italian"
+        "name": "Street Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Vada Pav",
+            "rating": "4.4",
+            "price": 52
+          },
+          {
+            "name": "Pav Bhaji",
+            "rating": "4.3",
+            "price": 134
+          },
+          {
+            "name": "Dabeli",
+            "rating": "4.0",
+            "price": 74
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "name": "Chaat House",
+    "cuisines": [
+      {
+        "name": "Desserts",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Brownie",
+            "rating": "4.8",
+            "price": 169
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "rating": "4.1",
+            "price": 137
+          },
+          {
+            "name": "Gulab Jamun",
+            "rating": "4.9",
+            "price": 97
+          }
+        ]
+      },
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.5",
+            "price": 103
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.3",
+            "price": 230
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "3.9",
+            "price": 53
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "name": "Thali Express",
+    "cuisines": [
+      {
+        "name": "Fast Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Burger",
+            "rating": "4.8",
+            "price": 268
+          },
+          {
+            "name": "Pizza",
+            "rating": "4.0",
+            "price": 239
+          },
+          {
+            "name": "French Fries",
+            "rating": "4.3",
+            "price": 254
+          }
+        ]
+      },
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.9",
+            "price": 145
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.2",
+            "price": 270
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.0",
+            "price": 146
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "name": "Biryani Bhavan",
+    "cuisines": [
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.3",
+            "price": 87
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.6",
+            "price": 263
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.8",
+            "price": 292
+          }
+        ]
+      },
+      {
+        "name": "Fast Food",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Burger",
+            "rating": "4.1",
+            "price": 167
+          },
+          {
+            "name": "Pizza",
+            "rating": "4.9",
+            "price": 53
+          },
+          {
+            "name": "French Fries",
+            "rating": "4.4",
+            "price": 240
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "name": "Wrap & Roll",
+    "cuisines": [
+      {
+        "name": "Desserts",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Brownie",
+            "rating": "3.9",
+            "price": 285
+          },
+          {
+            "name": "Ice Cream Sundae",
+            "rating": "4.1",
+            "price": 73
+          },
+          {
+            "name": "Gulab Jamun",
+            "rating": "4.9",
+            "price": 279
+          }
+        ]
+      },
+      {
+        "name": "Chinese",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Veg Noodles",
+            "rating": "4.6",
+            "price": 116
+          },
+          {
+            "name": "Manchurian",
+            "rating": "4.9",
+            "price": 264
+          },
+          {
+            "name": "Spring Rolls",
+            "rating": "4.5",
+            "price": 159
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "name": "Chili & Cheese",
+    "cuisines": [
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.7",
+            "price": 292
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.4",
+            "price": 134
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.2",
+            "price": 118
+          }
+        ]
+      },
+      {
+        "name": "Drinks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Chai",
+            "rating": "4.9",
+            "price": 66
+          },
+          {
+            "name": "Cold Coffee",
+            "rating": "4.4",
+            "price": 286
+          },
+          {
+            "name": "Lassi",
+            "rating": "4.2",
+            "price": 95
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "name": "Roti Nation",
+    "cuisines": [
+      {
+        "name": "South Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Dosa",
+            "rating": "4.9",
+            "price": 71
+          },
+          {
+            "name": "Idli Sambhar",
+            "rating": "4.6",
+            "price": 252
+          },
+          {
+            "name": "Vada",
+            "rating": "4.5",
+            "price": 280
+          }
+        ]
+      },
+      {
+        "name": "Biryani",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Chicken Biryani",
+            "rating": "4.8",
+            "price": 236
+          },
+          {
+            "name": "Veg Biryani",
+            "rating": "4.8",
+            "price": 156
+          },
+          {
+            "name": "Hyderabadi Biryani",
+            "rating": "4.6",
+            "price": 285
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "139",
+    "name": "The Veggie Bowl",
+    "cuisines": [
+      {
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "4.6",
+            "price": 98
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.6",
+            "price": 258
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.1",
+            "price": 279
+          }
+        ]
+      },
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.8",
+            "price": 129
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.6",
+            "price": 219
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.7",
+            "price": 294
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "140",
+    "name": "Masala Magic",
+    "cuisines": [
+      {
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "5.0",
+            "price": 191
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.7",
+            "price": 73
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.8",
+            "price": 77
+          }
+        ]
+      },
+      {
+        "name": "Biryani",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Chicken Biryani",
+            "rating": "4.1",
+            "price": 81
+          },
+          {
+            "name": "Veg Biryani",
+            "rating": "3.9",
+            "price": 260
+          },
+          {
+            "name": "Hyderabadi Biryani",
+            "rating": "4.5",
+            "price": 117
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "name": "Naan Stop",
+    "cuisines": [
+      {
+        "name": "South Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Dosa",
+            "rating": "4.7",
+            "price": 268
+          },
+          {
+            "name": "Idli Sambhar",
+            "rating": "4.4",
+            "price": 154
+          },
+          {
+            "name": "Vada",
+            "rating": "4.8",
+            "price": 57
+          }
+        ]
+      },
+      {
+        "name": "North Indian",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Paneer Butter Masala",
+            "rating": "4.1",
+            "price": 63
+          },
+          {
+            "name": "Dal Makhani",
+            "rating": "4.3",
+            "price": 108
+          },
+          {
+            "name": "Butter Naan",
+            "rating": "4.0",
+            "price": 281
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "142",
+    "name": "Garam Masala",
+    "cuisines": [
+      {
+        "name": "Snacks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Samosa",
+            "rating": "4.3",
+            "price": 222
+          },
+          {
+            "name": "Aloo Tikki",
+            "rating": "4.7",
+            "price": 125
+          },
+          {
+            "name": "Chole Kulche",
+            "rating": "4.9",
+            "price": 291
+          }
+        ]
+      },
+      {
+        "name": "Drinks",
+        "tag": "Best Seller",
+        "items": [
+          {
+            "name": "Masala Chai",
+            "rating": "4.6",
+            "price": 296
+          },
+          {
+            "name": "Cold Coffee",
+            "rating": "4.7",
+            "price": 119
+          },
+          {
+            "name": "Lassi",
+            "rating": "4.6",
+            "price": 215
+          }
+        ]
       }
     ]
   }
